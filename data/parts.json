@@ -1,0 +1,35 @@
+{
+ "parts": {
+  "20-codigo-penal.json": {
+   "acts": [
+    "codigo-penal"
+   ],
+   "sha256": "442876912b6466dd3a94ee0c27d5778bde056c71fed532cd84a69e871441797d"
+  },
+  "30-codigo-processo-penal.json": {
+   "acts": [
+    "codigo-processo-penal"
+   ],
+   "sha256": "1ce16141a3238ab5b57ed259853b087336f83ef0d831ee8332f74774f88fd3b6"
+  },
+  "40-lei-relacoes-trabalho.json": {
+   "acts": [
+    "lei-relacoes-trabalho"
+   ],
+   "sha256": "8091b93042311c97a658f02d20474a57ee2f2cd9ff910ec2a49dfc64ad2bac64"
+  },
+  "50-codigo-civil.json": {
+   "acts": [
+    "codigo-civil"
+   ],
+   "sha256": "ce91458a5f9a3a5afe25092f3522a2af1ad3d0ebda45723d222e9f1c71e294b6"
+  },
+  "60-codigo-comercial.json": {
+   "acts": [
+    "codigo-comercial"
+   ],
+   "sha256": "507040fdd3ea77c0c31f07422547b9aa5a721406f57b77e0816b2ded96f38836"
+  }
+ },
+ "schema": 1
+}

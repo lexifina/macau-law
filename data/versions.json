@@ -1,0 +1,103 @@
+{
+ "country": "MO",
+ "acts": [
+  {
+   "slug": "basic-law",
+   "short": "基本法",
+   "title": "中華人民共和國澳門特別行政區基本法 (Basic Law of the Macao SAR)",
+   "url": "https://www.al.gov.mo/zh-hant/basic-law.html",
+   "versions": [
+    {
+     "from": "1999-12-20",
+     "units": 146,
+     "source_url": "https://www.al.gov.mo/zh-hant/basic-law.html",
+     "sha256": "5347871c1fff0e31447a1acb7bb42be0055d34a9dfbbdeb7179e6ae3d825dd76"
+    }
+   ]
+  },
+  {
+   "slug": "annexes",
+   "short": "基本法附件",
+   "title": "基本法附件一至三 (Annexes I to III)",
+   "url": "https://www.al.gov.mo/zh-hant/basic-law.html",
+   "versions": [
+    {
+     "from": "2012-06-30",
+     "units": 3,
+     "source_url": "https://www.al.gov.mo/zh-hant/basic-law.html",
+     "sha256": "5347871c1fff0e31447a1acb7bb42be0055d34a9dfbbdeb7179e6ae3d825dd76"
+    }
+   ]
+  },
+  {
+   "slug": "codigo-penal",
+   "short": "Código Penal",
+   "title": "Código Penal (aprovado pelo Decreto-Lei n.º 58/95/M, de 14 de Novembro)",
+   "url": "https://bo.io.gov.mo/bo/i/95/46/codpenpt/default.asp",
+   "versions": [
+    {
+     "from": "2025-08-16",
+     "units": 353,
+     "source_url": "https://bo.io.gov.mo/bo/i/95/46/codpenpt/codpen0001.asp",
+     "sha256": "7803adcc8751782880b785ec689b07b94ff5caf56fcefa091106232f9016d4dc"
+    }
+   ]
+  },
+  {
+   "slug": "codigo-processo-penal",
+   "short": "Código de Processo Penal",
+   "title": "Código de Processo Penal (aprovado pelo Decreto-Lei n.º 48/96/M, de 2 de Setembro)",
+   "url": "https://bo.io.gov.mo/bo/i/96/36/codpropenpt/default.asp",
+   "versions": [
+    {
+     "from": "2025-08-28",
+     "units": 503,
+     "source_url": "https://bo.io.gov.mo/bo/i/96/36/codpropenpt/codpropen0001.asp",
+     "sha256": "ffed8e83100964faf2d13a7cde9dd939833a5103862d69d5fdd1c31c09bb1324"
+    }
+   ]
+  },
+  {
+   "slug": "lei-relacoes-trabalho",
+   "short": "Lei das relações de trabalho",
+   "title": "Lei n.º 7/2008 (Lei das relações de trabalho)",
+   "url": "https://bo.io.gov.mo/bo/i/2008/33/lei07.asp",
+   "versions": [
+    {
+     "from": "2025-04-03",
+     "units": 100,
+     "source_url": "https://bo.io.gov.mo/bo/i/2008/33/lei07.asp",
+     "sha256": "0513245db48d79edb7c87ce65462729b897ed9aa375ed949f684f8b765f4220b"
+    }
+   ]
+  },
+  {
+   "slug": "codigo-civil",
+   "short": "Código Civil",
+   "title": "Código Civil (aprovado pelo Decreto-Lei n.º 39/99/M, de 3 de Agosto)",
+   "url": "https://bo.io.gov.mo/bo/i/99/31/codcivpt/default.asp",
+   "versions": [
+    {
+     "from": "2025-02-13",
+     "units": 2116,
+     "source_url": "https://bo.io.gov.mo/bo/i/99/31/codcivpt/codciv0001.asp",
+     "sha256": "d3c69d6e1c6ae980207169e9208e9c612789b79f88102266e2be9a5ae308bccb"
+    }
+   ]
+  },
+  {
+   "slug": "codigo-comercial",
+   "short": "Código Comercial",
+   "title": "Código Comercial (aprovado pelo Decreto-Lei n.º 40/99/M, de 3 de Agosto)",
+   "url": "https://bo.io.gov.mo/bo/i/99/31/codcompt/default.asp",
+   "versions": [
+    {
+     "from": "2025-09-17",
+     "units": 1271,
+     "source_url": "https://bo.io.gov.mo/bo/i/99/31/codcompt/codcom0001.asp",
+     "sha256": "24b3ff0750364ea6a95208234d412cd60fa4dbda2687892770dc66685eae35e8"
+    }
+   ]
+  }
+ ]
+}

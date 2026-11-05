@@ -3,9 +3,9 @@
   "code": "MO",
   "name": "Macau",
   "level": "country",
-  "note": "special administrative region of China",
+  "note": "Special administrative region of China. Selected updated codes and a partial current-text selection of Assembly laws; no reconstructed amendment history.",
   "repo": "https://github.com/lexifina/macau-law",
-  "build": "built",
+  "build": "partial",
   "register": "https://claude.ai/artifact/DdS9F6yqpPZtV2i7FGQhYZ",
   "register_date": "2026-10-28"
 }

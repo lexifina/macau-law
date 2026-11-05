@@ -98,6 +98,902 @@
      "sha256": "24b3ff0750364ea6a95208234d412cd60fa4dbda2687892770dc66685eae35e8"
     }
    ]
+  },
+  {
+   "slug": "lei-15-2026",
+   "short": "Lei n.º 15/2026",
+   "title": "Alteração ao Regulamento do Imposto de Consumo, aprovado pela Lei n.º 4/99/M, de 13 de Dezembro",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/muruh9cq.html",
+   "versions": [
+    {
+     "from": "2027-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/53eb0940-b927-4003-9cd1-1bcd06c16c19.pdf",
+     "sha256": "6cbef56aa76b0cb3410c30b55f596ed15ada90af5df5c02ed71b39262c6e5557"
+    }
+   ]
+  },
+  {
+   "slug": "lei-14-2026",
+   "short": "Lei n.º 14/2026",
+   "title": "Lei de uso das áreas marítimas",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill621.html",
+   "versions": [
+    {
+     "from": "2026-12-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/326606a8b9a0db75cf.pdf",
+     "sha256": "155e55de7ba8a55c557e40fe8bdb7438b4a87b7386ac0756b5006f86910f3cba"
+    }
+   ]
+  },
+  {
+   "slug": "lei-13-2026",
+   "short": "Lei n.º 13/2026",
+   "title": "Consolidação dos recursos financeiros do Fundo de Pensões",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill628.html",
+   "versions": [
+    {
+     "from": "2026-08-18",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/392726a825eefeb4f9.pdf",
+     "sha256": "ade05b7a06d30bd675acb3930fc301ca3ed950aa0a63df965077c5ae6e1e6f5b"
+    }
+   ]
+  },
+  {
+   "slug": "lei-11-2026",
+   "short": "Lei n.º 11/2026",
+   "title": "Alteração à Lei n.º 11/2000 ‒ Lei Orgânica da Assembleia Legislativa da Região Administrativa Especial de Macau",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill624.html",
+   "versions": [
+    {
+     "from": "2026-10-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/957596a7043d66f75f.pdf",
+     "sha256": "92f21d7535de3871e634710d8091f35d0786cdc0ff04ab3e55145259c3663693"
+    }
+   ]
+  },
+  {
+   "slug": "lei-10-2026",
+   "short": "Lei n.º 10/2026",
+   "title": "Alteração à Lei n.º 5/2011 – Regime de prevenção e controlo do tabagismo",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill622.html",
+   "versions": [
+    {
+     "from": "2027-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/957866a6855678512a.pdf",
+     "sha256": "abb515fe10769cd553637f4c4fb6f33cc4d8b27b87a9986d077fb80d1ecdfb1d"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2026",
+   "short": "Lei n.º 9/2026",
+   "title": "Alteração à Lei n.º 7/2008 ‒ Lei das relações de trabalho",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill623.html",
+   "versions": [
+    {
+     "from": "2027-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/596216a683239922c5.pdf",
+     "sha256": "1637ada783b0da8c80fb61dcddc481b7972546b7d36f8efddb716cae8ee6cd0e"
+    }
+   ]
+  },
+  {
+   "slug": "lei-8-2026",
+   "short": "Lei n.º 8/2026",
+   "title": "Lei da actividade das instituições privadas prestadoras de cuidados de saúde",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill614.html",
+   "versions": [
+    {
+     "from": "2026-12-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/453466a1cdb6d86ef7.pdf",
+     "sha256": "004e7e51bd52afe8a6369ae0a1436d5adb7b52428528b94f2904a75c6afa0ea0"
+    }
+   ]
+  },
+  {
+   "slug": "lei-7-2026",
+   "short": "Lei n.º 7/2026",
+   "title": "Lei da publicidade",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill615.html",
+   "versions": [
+    {
+     "from": "2027-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/169786a0137a98a5cc.pdf",
+     "sha256": "c5e4c9e5d97f0a527b46bb2e03e2d770f57607b0fe10d986331c2bde7055a1fc"
+    }
+   ]
+  },
+  {
+   "slug": "lei-6-2026",
+   "short": "Lei n.º 6/2026",
+   "title": "Alteração à Lei n.º 14/2021 ‒ Regime jurídico da construção urbana",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill616.html",
+   "versions": [
+    {
+     "from": "2026-07-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/881866a0135b13b4be.pdf",
+     "sha256": "b4f560a3163f0e3f8c049d63c1c01c262ca19dc615940b58d61b4328c4db0d93"
+    }
+   ]
+  },
+  {
+   "slug": "lei-4-2026",
+   "short": "Lei n.º 4/2026",
+   "title": "Regime da venda de artigos de ouro e de platina",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill609.html",
+   "versions": [
+    {
+     "from": "2027-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/1245369c9dd36ac928.pdf",
+     "sha256": "3b038890feffa798f8d1e2b051f50f28e8610e3065a9d5f23fe86057aa017821"
+    }
+   ]
+  },
+  {
+   "slug": "lei-3-2026",
+   "short": "Lei n.º 3/2026",
+   "title": "Alteração à Lei n.º 4/2010 ‒ Regime da Segurança Social e à Lei n.º 7/2017 ‒ Regime de previdência central não obrigatório",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill617.html",
+   "versions": [
+    {
+     "from": "2026-03-24",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/5510869c0f742ddec7.pdf",
+     "sha256": "8bf40ba82acc13a3c8170835049e1f452b962da131259f66cfa43d36f317c2a8"
+    }
+   ]
+  },
+  {
+   "slug": "lei-1-2026",
+   "short": "Lei n.º 1/2026",
+   "title": "Alteração à Lei n.º 9/2018 ‒ Criação do Instituto para os Assuntos Municipais",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill608.html",
+   "versions": [
+    {
+     "from": "2026-06-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2026/38908699bb94b8a635.pdf",
+     "sha256": "8a87a5f521f51692db42d823ec768925f4e3e44dd849bcb9a9bb4d7fb79e13ca"
+    }
+   ]
+  },
+  {
+   "slug": "lei-14-2025",
+   "short": "Lei n.º 14/2025",
+   "title": "Alteração à Lei n.º 5/2020 ‒ Salário mínimo para os trabalhadores",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill612.html",
+   "versions": [
+    {
+     "from": "2026-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/66575695396e95fccf.pdf",
+     "sha256": "640702959f3cfbcfbef88ae6912a13d27879a7cddf4a884b0445e96458b011c0"
+    }
+   ]
+  },
+  {
+   "slug": "lei-12-2025",
+   "short": "Lei n.º 12/2025",
+   "title": "Regime de supervisão e administração de dispositivos médicos",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill597.html",
+   "versions": [
+    {
+     "from": "2026-07-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/646136886df072377f.pdf",
+     "sha256": "18ff201bad3fd1be6406e135481fd827d62dde43b39aa743a08c5c37ed43acb2"
+    }
+   ]
+  },
+  {
+   "slug": "lei-10-2025",
+   "short": "Lei n.º 10/2025",
+   "title": "Lei da contratação pública",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill581.html",
+   "versions": [
+    {
+     "from": "2026-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/833056886dd27422de.pdf",
+     "sha256": "48d8e5ca515c76ee1ffacaa9b245253b6ef29168426b8146c4bb5c7ac2434c97"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2025",
+   "short": "Lei n.º 9/2025",
+   "title": "Alteração à Lei n.º 15/2009 – Disposições Fundamentais do Estatuto do Pessoal de Direcção e Chefia",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill601.html",
+   "versions": [
+    {
+     "from": "2025-11-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/94035687d9b75c63bc.pdf",
+     "sha256": "bc51119548d71180fc23ac3200029dc62b364731768611d780816398f1e08f55"
+    }
+   ]
+  },
+  {
+   "slug": "lei-7-2025",
+   "short": "Lei n.º 7/2025",
+   "title": "Alteração à Lei n.º 3/2000 – Da Legislatura e do Estatuto dos Deputados à Assembleia Legislativa",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill605.html",
+   "versions": [
+    {
+     "from": "2025-10-16",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/62500687461de062ff.pdf",
+     "sha256": "b8b6bcfba51893ed0e00fcea955d64fe0f9721a3fb3fbaabffac247509c91a2d"
+    }
+   ]
+  },
+  {
+   "slug": "lei-5-2025",
+   "short": "Lei n.º 5/2025",
+   "title": "Lei da actividade das agências de viagens e da profissão de guia turístico",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill588.html",
+   "versions": [
+    {
+     "from": "2026-02-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/50693686b245d4417b.pdf",
+     "sha256": "4dc26af2280c119aca70ebb16a3493e7eff6d33649affd3d01b0f01d38674eb0"
+    }
+   ]
+  },
+  {
+   "slug": "lei-4-2025",
+   "short": "Lei n.º 4/2025",
+   "title": "Lei da actividade de aviação civil",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill565.html",
+   "versions": [
+    {
+     "from": "2026-02-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/10292686b22e8951da.pdf",
+     "sha256": "98182a01e65322f37e5b8e3ee85082bc1be37c596756954f60e2e8f8a049a80a"
+    }
+   ]
+  },
+  {
+   "slug": "lei-1-2025",
+   "short": "Lei n.º 1/2025",
+   "title": "Alteração à Lei n.º 3/2012 – Quadro geral do pessoal docente das escolas particulares do ensino não superior e à Lei n.º 15/2020 – Estatuto das escolas particulares do ensino não superior",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill602.html",
+   "versions": [
+    {
+     "from": "2025-06-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2025/560936833f18d836f3.pdf",
+     "sha256": "e46165ded25eb060e5d8429092228b04ddf944031481ee96db8cdc8a38f260be"
+    }
+   ]
+  },
+  {
+   "slug": "lei-22-2024",
+   "short": "Lei n.º 22/2024",
+   "title": "Regime de gestão dos vendilhões",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill591.html",
+   "versions": [
+    {
+     "from": "2025-03-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/55353674d111abfbc4.pdf",
+     "sha256": "189b8ebc374f8bd092e8a9862e99fd07b1e3407787d067fa87dfa480357fb3a2"
+    }
+   ]
+  },
+  {
+   "slug": "lei-21-2024",
+   "short": "Lei n.º 21/2024",
+   "title": "Regime jurídico das radiocomunicações",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill579.html",
+   "versions": [
+    {
+     "from": "2025-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/212826732aef43f592.pdf",
+     "sha256": "01a095483cb539fb031853e823bfce57943f868262226088a818c960b2fcd198"
+    }
+   ]
+  },
+  {
+   "slug": "lei-19-2024",
+   "short": "Lei n.º 19/2024",
+   "title": "Alteração ao regime da acção de despejo do Código de Processo Civil",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill590.html",
+   "versions": [
+    {
+     "from": "2025-03-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/83271672042ef6c8d5.pdf",
+     "sha256": "4e20ad0ac4feb3f0816f89d1351a533c2a0bd4505889026f6d1771d86b14b369"
+    }
+   ]
+  },
+  {
+   "slug": "lei-17-2024",
+   "short": "Lei n.º 17/2024",
+   "title": "Alteração à Lei n.º 10/2000 ‒ Lei Orgânica do Comissariado contra a Corrupção da Região Administrativa Especial de Macau",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill580.html",
+   "versions": [
+    {
+     "from": "2024-10-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/3383166cbf385593c4.pdf",
+     "sha256": "e1fad325dddf97b631a920221037d3939891b54071b6ac0f3aac32a068a2ec9c"
+    }
+   ]
+  },
+  {
+   "slug": "lei-14-2024",
+   "short": "Lei n.º 14/2024",
+   "title": "Regime da transmissão de fracções autónomas de edifícios afectados a habitação económica e habitação intermédia",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill583.html",
+   "versions": [
+    {
+     "from": "2024-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/693976682077639ad5.pdf",
+     "sha256": "4cafa1de5db00142507df18f2d5d689518c30a01bfe6dd0bbb681879e9f7b2ed"
+    }
+   ]
+  },
+  {
+   "slug": "lei-13-2024",
+   "short": "Lei n.º 13/2024",
+   "title": "Alteração à Lei n.º 2/2020 ‒ Governação electrónica e à Lei n.º 5/2022 ‒ Envio de peças processuais e pagamento de custas por meios electrónicos",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill576.html",
+   "versions": [
+    {
+     "from": "2024-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/3725566820685aa3c8.pdf",
+     "sha256": "0f0e1731f26137960bd351b8f8ff35bc55eea001e96c848c9f6da9970646b832"
+    }
+   ]
+  },
+  {
+   "slug": "lei-10-2024",
+   "short": "Lei n.º 10/2024",
+   "title": "Estabelece as normas fundamentais para a aplicação do Direito da Região Administrativa Especial de Macau nas áreas terrestre e marítima relevantes do lado sudeste do Posto Fronteiriço de Gongbei da Cidade de Zhuhai da Província de Guangdong",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill587.html",
+   "versions": [
+    {
+     "from": "2024-05-28",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/265966653e0a7bb762.pdf",
+     "sha256": "f7cb082665dde445ae59768cf2586bb3186daf96a5fc6ff289e713680cb7649f"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2024",
+   "short": "Lei n.º 9/2024",
+   "title": "Alteração à Lei n.º 4/1999 ‒ Lei dos juramentos por ocasião do acto de posse",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill585.html",
+   "versions": [
+    {
+     "from": "2024-05-28",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/429826653df6b6f801.pdf",
+     "sha256": "62f2950d83dbf692004971ca17e0713da044dd479bdfa0eea65c790be4e9733c"
+    }
+   ]
+  },
+  {
+   "slug": "lei-8-2024",
+   "short": "Lei n.º 8/2024",
+   "title": "Alteração à Lei Eleitoral para a Assembleia Legislativa da Região Administrativa Especial de Macau",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill577.html",
+   "versions": [
+    {
+     "from": "2024-04-23",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/480446625c1dc3edca.pdf",
+     "sha256": "449e5ecadb74853184a8428263bba8625e575b2650c8cbca4d2e67d7a3406d86"
+    }
+   ]
+  },
+  {
+   "slug": "lei-7-2024",
+   "short": "Lei n.º 7/2024",
+   "title": "Regime jurídico da concessão de crédito para jogos de fortuna ou azar em casino",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill562.html",
+   "versions": [
+    {
+     "from": "2024-08-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/813956625be80bf9e8.pdf",
+     "sha256": "dc34df6e73ed8cc73e4af91dc2c28532b5304dc4ea002f22e1db220568c3b24c"
+    }
+   ]
+  },
+  {
+   "slug": "lei-6-2024",
+   "short": "Lei n.º 6/2024",
+   "title": "Lei sindical",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill557.html",
+   "versions": [
+    {
+     "from": "2025-03-31",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/913856625bd5b95fce.pdf",
+     "sha256": "6ec26fc80556fbd33f445ca4b36ceae778a0b84cde08818506c8007eef06a8da"
+    }
+   ]
+  },
+  {
+   "slug": "lei-3-2024",
+   "short": "Lei n.º 3/2024",
+   "title": "Regime jurídico da Universidade Politécnica de Macau",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill566.html",
+   "versions": [
+    {
+     "from": "2024-04-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2024/8983665d2aaa25d893.pdf",
+     "sha256": "d616361078d963605d23a5df69d891d6a3643946a7a3bb7b2fdba2d2fc0a1e45"
+    }
+   ]
+  },
+  {
+   "slug": "lei-16-2023",
+   "short": "Lei n.º 16/2023",
+   "title": "Regime jurídico das empresas de capitais públicos",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill523.html",
+   "versions": [
+    {
+     "from": "2023-11-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2023/7440164e2bd9230835.pdf",
+     "sha256": "3304b5affb364b3f758ffc58de3223f2116ae5ee90142a5a5cd914b8497e0b9d"
+    }
+   ]
+  },
+  {
+   "slug": "lei-12-2023",
+   "short": "Lei n.º 12/2023",
+   "title": "Disposições específicas sobre a remuneração do pessoal que exerce funções específicas da Direcção dos Serviços de Educação e de Desenvolvimento da Juventude",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill559.html",
+   "versions": [
+    {
+     "from": "2023-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2023/48973649a82aabe23b.pdf",
+     "sha256": "0b09acf014d9076487d6fd06150381f9efbdcb59d468a8c50b7b0dc235759387"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2023",
+   "short": "Lei n.º 9/2023",
+   "title": "Regime da arbitragem necessária de litígios relativos a infiltrações de água em edifícios",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill541.html",
+   "versions": [
+    {
+     "from": "2023-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2023/33709648fb229c6edb.pdf",
+     "sha256": "376e4702b82bfc28f8874a11efea024c9315d073bf9139dec4399a890cccc03b"
+    }
+   ]
+  },
+  {
+   "slug": "lei-7-2023",
+   "short": "Lei n.º 7/2023",
+   "title": "Regime jurídico de captação de quadros qualificados",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill531.html",
+   "versions": [
+    {
+     "from": "2023-07-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2023/518946474022fe033d.pdf",
+     "sha256": "b5d0ddd9925c2624b447910481427fa6b35bc56d196f288b525e020f247b4694"
+    }
+   ]
+  },
+  {
+   "slug": "lei-2-2023",
+   "short": "Lei n.º 2/2023",
+   "title": "Lei da segurança e saúde ocupacional na construção civil",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill517.html",
+   "versions": [
+    {
+     "from": "2023-11-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2023/81649640e7957de502.pdf",
+     "sha256": "d485ccc6d8b05ca1a42f2a513b87e8bd32d06de203ea1e4c843a63b5c6cfa234"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2022",
+   "short": "Lei n.º 9/2022",
+   "title": "Alteração à lista de doenças transmissíveis anexa à Lei n.º 2/2004 - Lei de prevenção, controlo e tratamento de doenças transmissíveis",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill529.html",
+   "versions": [
+    {
+     "from": "2022-07-26",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2022/9616762de5b4eb3dbe.pdf",
+     "sha256": "603e217723b4d315c69a9aed354b3a1973290dc771d642cd7915152d21a4783d"
+    }
+   ]
+  },
+  {
+   "slug": "lei-6-2022",
+   "short": "Lei n.º 6/2022",
+   "title": "Exibição por meios electrónicos dos documentos necessários à condução de veículos",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill511.html",
+   "versions": [
+    {
+     "from": "2022-10-15",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2022/4158662c697627dea4.pdf",
+     "sha256": "1c1c957bc6edbda442593aa9b9d008ab4b5179aed6c96453bac98ed93c9d27ef"
+    }
+   ]
+  },
+  {
+   "slug": "lei-3-2022",
+   "short": "Lei n.º 3/2022",
+   "title": "Alteração à Lei n.º 3/2010 – Proibição de prestação ilegal de alojamento",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill475.html",
+   "versions": [
+    {
+     "from": "2022-04-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2022/3552562255bddcc8c9.pdf",
+     "sha256": "034962cfcab58605f2d0fb9c07ab3e9a647c7aa82f3e58c207cfab6478aec587"
+    }
+   ]
+  },
+  {
+   "slug": "lei-2-2022",
+   "short": "Lei n.º 2/2022",
+   "title": "Alteração à Lei n.° 9/2006 - Lei de bases do sistema educativo não superior e à Lei n.º 10/2017 - Regime do ensino superior",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill493.html",
+   "versions": [
+    {
+     "from": "2022-06-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2022/7382162255d7702ea4.pdf",
+     "sha256": "ee1c2e62d40c725e6c99b6ef75462a03af9977ef1003d72422652e056c276cc3"
+    }
+   ]
+  },
+  {
+   "slug": "lei-20-2021",
+   "short": "Lei n.º 20/2021",
+   "title": "Alteração à Lei n.º 3/1999 - Publicação e formulário dos diplomas",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill481.html",
+   "versions": [
+    {
+     "from": "2022-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2021/4735761ca6dc6e2188.pdf",
+     "sha256": "e3f26b5da04e05c74c8a0aa3db09c951fb758870a1b9814b6d5a6bfe1d9cdaae"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2021",
+   "short": "Lei n.º 9/2021",
+   "title": "Lei de protecção dos direitos e interesses do consumidor",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill374.html",
+   "versions": [
+    {
+     "from": "2022-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2021/3223060eb969ce31d7.pdf",
+     "sha256": "a476ed8e9b2c0e44b43a1f7abcc26f818df3f8495c2042a5c7e6481dd00832be"
+    }
+   ]
+  },
+  {
+   "slug": "lei-26-2020",
+   "short": "Lei n.º 26/2020",
+   "title": "Alteração à Lei n.º 9/2002 - Lei de Bases da Segurança Interna da Região Administrativa Especial de Macau",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill425.html",
+   "versions": [
+    {
+     "from": "2021-02-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/876935ff2cb05cf775.pdf",
+     "sha256": "95c1c7b466a09a2738ac9afb7b6a349d88337a411ce407793a6258d2f600e239"
+    }
+   ]
+  },
+  {
+   "slug": "lei-16-2020",
+   "short": "Lei n.º 16/2020",
+   "title": "Lei da actividade de agências de emprego",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill330.html",
+   "versions": [
+    {
+     "from": "2021-03-15",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/539585f5ec6487a215.pdf",
+     "sha256": "0e2cd37a4a75930662cc8efffb614c41397b403ba7b3e69f959b375ecdc33152"
+    }
+   ]
+  },
+  {
+   "slug": "lei-14-2020",
+   "short": "Lei n.º 14/2020",
+   "title": "Alteração à Lei n.º 5/2006 - Polícia Judiciária",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill405.html",
+   "versions": [
+    {
+     "from": "2020-10-12",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/485915f4c6f4475779.pdf",
+     "sha256": "4674b3932b0ddc1589fa1cf3d9a791b8fab1bc942d1fcd5dae9bdf67cb09307e"
+    }
+   ]
+  },
+  {
+   "slug": "lei-13-2020",
+   "short": "Lei n.º 13/2020",
+   "title": "Alteração à Lei n.º 10/2011 ‒ Lei da habitação económica",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill356.html",
+   "versions": [
+    {
+     "from": "2020-08-18",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/290935f39f69b61929.pdf",
+     "sha256": "e95aaa0b69a3464f480ef97dced45acad2cb565ff7a6ba1f46c6dd47ff82ae7b"
+    }
+   ]
+  },
+  {
+   "slug": "lei-12-2020",
+   "short": "Lei n.º 12/2020",
+   "title": "Alteração à Lei n.º 5/2003 - Autorização para a contracção de dívidas pelo Governo da Região Administrativa Especial de Macau",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill423.html",
+   "versions": [
+    {
+     "from": "2020-08-18",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/797765f39f492f3735.pdf",
+     "sha256": "d266d879add18dfb251cd9481c68f8ca2195fc4faa8f8d451c419b73b966257b"
+    }
+   ]
+  },
+  {
+   "slug": "lei-10-2020",
+   "short": "Lei n.º 10/2020",
+   "title": "Alteração à Lei n.º 21/2009 ‒ Lei da contratação de trabalhadores não residentes",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill390.html",
+   "versions": [
+    {
+     "from": "2020-10-05",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/170725f028f4794f73.pdf",
+     "sha256": "5a5bafbb9f5c59604ff5837a03271107cb7c2634ba537e7d44750d8305623172"
+    }
+   ]
+  },
+  {
+   "slug": "lei-7-2020",
+   "short": "Lei n.º 7/2020",
+   "title": "Lei de controlo sanitário animal",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill399.html",
+   "versions": [
+    {
+     "from": "2020-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/390095ecb89d78d9b0.pdf",
+     "sha256": "1054d52cc0785f2a7d91a46b1d24bafcb79a2dfc83765656a724a5d9969444b1"
+    }
+   ]
+  },
+  {
+   "slug": "lei-4-2020",
+   "short": "Lei n.º 4/2020",
+   "title": "Alteração à Lei n.º 11/2009 – Lei de combate à criminalidade informática",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill393.html",
+   "versions": [
+    {
+     "from": "2020-07-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/558095ea634e7ad747.pdf",
+     "sha256": "1aee8884273b121d12c100512e055d9a9adeb7e88f09f22d04a762f2bb35a7ce"
+    }
+   ]
+  },
+  {
+   "slug": "lei-1-2020",
+   "short": "Lei n.º 1/2020",
+   "title": "Estabelece as normas fundamentais para a aplicação do Direito da Região Administrativa Especial de Macau na Zona do Posto Fronteiriço da Parte de Macau do Posto Fronteiriço Hengqin e nas suas zonas contíguas",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill411.html",
+   "versions": [
+    {
+     "from": "2020-03-18",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2020/173585e704d619e59d.pdf",
+     "sha256": "5ec610a9fcbd4f7f5797ce7f39e614aa0592d471669a129c3d38d5885b9622f3"
+    }
+   ]
+  },
+  {
+   "slug": "lei-16-2019",
+   "short": "Lei n.º 16/2019",
+   "title": "Restrições ao fornecimento de sacos de plástico",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill381.html",
+   "versions": [
+    {
+     "from": "2019-11-18",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2019/180465d5a004e426f0.pdf",
+     "sha256": "9f8c5fcd4c8aa8d0cf5a0184ec4007677976fd8796f0906a5eb692ffbc05dd3c"
+    }
+   ]
+  },
+  {
+   "slug": "lei-14-2019",
+   "short": "Lei n.º 14/2019",
+   "title": "Consolidação dos recursos financeiros do Fundo de Segurança Social",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill388.html",
+   "versions": [
+    {
+     "from": "2019-08-13",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2019/889885d50c4e5901c9.pdf",
+     "sha256": "eeac53b49c4b5bd02e0b83e65c58c3c2f1bcbb68ab8c67cee9443afff4962292"
+    }
+   ]
+  },
+  {
+   "slug": "lei-11-2019",
+   "short": "Lei n.º 11/2019",
+   "title": "Alteração à Lei n.º 7/2015 ‒ Salário mínimo para os trabalhadores de limpeza e de segurança na actividade de administração predial",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill365.html",
+   "versions": [
+    {
+     "from": "2019-09-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2019/581325d1036f900a02.pdf",
+     "sha256": "1290bb6369f78f56abb599bca4ef9cb24b2553e55699f10054818fe8b3be8d35"
+    }
+   ]
+  },
+  {
+   "slug": "lei-9-2019",
+   "short": "Lei n.º 9/2019",
+   "title": "Alteração à Lei n.º 8/2014 – Prevenção e controlo do ruído ambiental",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill361.html",
+   "versions": [
+    {
+     "from": "2019-04-30",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2019/162085cc6537dc4eea.pdf",
+     "sha256": "2a7c71e4122e2dc1e9fb111a4e44aa96bd03a170eb73c0e383ba48b87a70f45f"
+    }
+   ]
+  },
+  {
+   "slug": "lei-8-2019",
+   "short": "Lei n.º 8/2019",
+   "title": "Regime jurídico de habitação para alojamento temporário e de habitação para troca no âmbito da renovação urbana",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill359.html",
+   "versions": [
+    {
+     "from": "2019-04-24",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2019/621855cbed1d0e4db9.pdf",
+     "sha256": "d3a9a27727c3adfbcebd2b1965810297a32bff2364dae472d545fc6a44562438"
+    }
+   ]
+  },
+  {
+   "slug": "lei-7-2019",
+   "short": "Lei n.º 7/2019",
+   "title": "Regime do benefício fiscal para a locação financeira",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill340.html",
+   "versions": [
+    {
+     "from": "2019-04-09",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2019/972175caaa6e232fdf.pdf",
+     "sha256": "882f501ab58e65db1579bb4607d59a2434d2c144fb36e8810251b96b16d9deae"
+    }
+   ]
+  },
+  {
+   "slug": "lei-17-2018",
+   "short": "Lei n.º 17/2018",
+   "title": "Alteração à Lei n.º 10/2012 – Condicionamento da entrada, do trabalho e do jogo nos casinos",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill344.html",
+   "versions": [
+    {
+     "from": "2018-12-28",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2018/613945c2494c4317de.pdf",
+     "sha256": "cf287988722b77abbc4e4fe6b21b2fc928a322f29365825759c43f136a562937"
+    }
+   ]
+  },
+  {
+   "slug": "lei-16-2018",
+   "short": "Lei n.º 16/2018",
+   "title": "Actualização dos índices mínimos das pensões de aposentação e de sobrevivência",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill350.html",
+   "versions": [
+    {
+     "from": "2019-01-01",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2018/108905c248987c6025.pdf",
+     "sha256": "df4889d5ea65c7858dbc26e6ad199500ad5e1c9591156ff64394b13c6595d2d8"
+    }
+   ]
+  },
+  {
+   "slug": "lei-15-2018",
+   "short": "Lei n.º 15/2018",
+   "title": "Revogação do regime jurídico do exercício da actividade 《offshore》",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill352.html",
+   "versions": [
+    {
+     "from": "2018-12-28",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2018/141815c248667b776f.pdf",
+     "sha256": "2f454693d4112aa5e2cef8045f0ce4a49f48270419e2b437bb14113ff8816bba"
+    }
+   ]
+  },
+  {
+   "slug": "lei-12-2018",
+   "short": "Lei n.º 12/2018",
+   "title": "Regime jurídico de garantias dos direitos e interesses dos idosos",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill318.html",
+   "versions": [
+    {
+     "from": "2018-11-19",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2018/266455b7bbf250466f.pdf",
+     "sha256": "170b112d5c67ef87e6362314263605829ff4f5137aa33d1586848aa3b2493e4b"
+    }
+   ]
+  },
+  {
+   "slug": "lei-11-2018",
+   "short": "Lei n.º 11/2018",
+   "title": "Alteração à Lei n.º 2/93/M, de 17 de Maio – Direito de Reunião e de Manifestação",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill334.html",
+   "versions": [
+    {
+     "from": "2018-09-13",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2018/806835b723a445b58e.pdf",
+     "sha256": "734e538d59d70f00170239c39049f64ae18235f8aaaabd0a265891419ce3059f"
+    }
+   ]
+  },
+  {
+   "slug": "lei-10-2018",
+   "short": "Lei n.º 10/2018",
+   "title": "Benefício fiscal especial para a aquisição de veículos motorizados",
+   "url": "https://www.al.gov.mo/pt/law-bill-details/article/lawbill336.html",
+   "versions": [
+    {
+     "from": "2018-08-14",
+     "units": 1,
+     "source_url": "https://www.al.gov.mo/law/2018/134635b72386d842d1.pdf",
+     "sha256": "18e997175a595f38bb2b1817569c7a2e019d353e02fe89ee42c93b23e7af0fad"
+    }
+   ]
   }
  ]
 }

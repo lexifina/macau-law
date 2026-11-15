@@ -23,7 +23,8 @@ The text is in Macau's two official languages, as the sources print it: Chinese 
 
 - **[Ask Claude about Macau law](https://global-law.lexifina.com/v1/try_claude?country=macau)**: opens Claude with a first question ready.
 - **[Ask ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=macau)**: the same question in ChatGPT.
-- **[Call the API in your browser](https://global-law.lexifina.com/v1/search_law?query=f%C3%A9rias&jurisdictions=macau)**: a search of Macau law for "férias", returned as JSON. See the [documentation here](https://lexifina.com/api/global-law).
+- **[Search Macau law on our site](https://lexifina.com/law?country=macau&q=f%C3%A9rias)**: a search for "férias", with each provision's text and its versions, no account needed.
+- **[Developer REST API](https://global-law.lexifina.com/v1/search_law?query=f%C3%A9rias&jurisdiction=macau)**: the same search as JSON, with no key. See the [documentation here](https://lexifina.com/api/global-law).
 
 Both assistants read the record through the free Global law connector (MCP, `https://global-law.lexifina.com/mcp`); the first time, the chat gives you the link that adds it. Ask in Portuguese, in Chinese or in English.
 

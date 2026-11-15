@@ -1,98 +1,87 @@
 # Macau: law history in git
 
+The law of Macau as a git history: one file per article (one file per law for the recent laws of the Legislative Assembly), one commit per version on the day in its `In-force:` trailer, and the act that made each change as the commit's author. So far every act has one version, credited to its publisher instead: `git blame` and `git log` name where each text came from; picking a date gives the text the record holds for that day.
+
 Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Macau's national law, which global-law reads at `macau/national/acts/`.
 
-The law of Macau as a git history: one file per provision, and the law that made each change as the commit's author, so `git blame` names the law behind every line.
+**What is in it now:** 64 acts, each with one version: the Basic Law (preamble and 145 articles) and its three Annexes, in Chinese; the Civil, Commercial, Penal and Criminal Procedure Codes and Lei n.º 7/2008, the Labour Relations Law, as updated texts in Portuguese; and 57 laws of the Legislative Assembly of 2018 to 2026, each as first published, in Portuguese. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its version and how each was chosen.
 
-It follows the shared design of [lexifina/global-law](https://github.com/lexifina/global-law), which places it at `mo/`.
+The codes are in `code/` (`code/codigo-civil/art-001.md` is Article 1 of the Código Civil), the Assembly laws in `lei/<year>/<number>/texto.md` (`lei/2024/6/texto.md` is Lei n.º 6/2024, the Lei sindical), the Labour Relations Law in `lei-relacoes-trabalho/` (`art-046.md` is Article 46, Direito a férias), the Basic Law in `basic-law/` and its Annexes in `annexes/`. [`data/paths.json`](data/paths.json) maps each act id to its folder.
 
-**What is in it now (first build retrieved 2026-10-29; codes added 2026-10-31)**
+The text is in Macau's two official languages, as the sources print it: Chinese (traditional) for the Basic Law and its Annexes, Portuguese for the rest. An English translation is not part of this record.
 
-| Folder | Law | Versions | Language |
-| --- | --- | ---: | --- |
-| `basic-law/` | Basic Law of the Macao SAR (preamble and Articles 1 to 145), implemented 20 December 1999 | 1 | Chinese (traditional); the Basic Law is authentic in Chinese and Portuguese |
-| `annexes/` | Annexes I to III, with the 2012 amendments shown beside the original text | 1 | Chinese (traditional) |
-| `codigo-penal/` | Código Penal (Decreto-Lei n.º 58/95/M), updated text as published by the Imprensa Oficial in the Boletim Oficial pages, as shown on 16 August 2025 | 1 | Portuguese, an official language of Macau |
-| `codigo-processo-penal/` | Código de Processo Penal (Decreto-Lei n.º 48/96/M), updated text as published by the Imprensa Oficial in the Boletim Oficial pages, as shown on 28 August 2025 | 1 | Portuguese |
-| `lei-relacoes-trabalho/` | Lei n.º 7/2008, Lei das relações de trabalho (labour relations law), updated text as published by the Imprensa Oficial in the Boletim Oficial pages, as shown on 3 April 2025 | 1 | Portuguese |
-| `codigo-civil/` | Código Civil (Decreto-Lei n.º 39/99/M), updated text as published by the Imprensa Oficial in the Boletim Oficial pages, as shown on 13 February 2025 | 1 | Portuguese |
-| `codigo-comercial/` | Código Comercial (Decreto-Lei n.º 40/99/M), updated text as published by the Imprensa Oficial in the Boletim Oficial pages, as shown on 17 September 2025 | 1 | Portuguese |
+## Questions as git commands
 
-Sources: the Legislative Assembly of the Macao SAR website (Basic Law, in Chinese) and the Boletim Oficial of the Imprensa Oficial (codes and laws, in Portuguese). Each code or law is the updated text the Imprensa Oficial shows, with its footnotes pointing to amending laws left out; there is no dated history yet, and the Chinese texts of the codes are not built.
+| Question | Command |
+| --- | --- |
+| Every change to Article 46 of the Labour Relations Law | `git log -p --word-diff -- lei-relacoes-trabalho/art-046.md` |
+| Who is credited with each line of Article 46? | `git blame lei-relacoes-trabalho/art-046.md` |
+| Every version of the Labour Relations Law, with its day | `git log --format="%h %(trailers:key=In-force,valueonly,separator=) %an" -- lei-relacoes-trabalho ':!lei-relacoes-trabalho/README.md'` |
+| Article 46 as the record holds it on 1 January 2026 | `python tools/on.py 2026-01-01 lei-relacoes-trabalho art-046` |
 
-This is a first, small build, not the whole statute book. It has no dated history: each act is one "oldest version available" commit, dated from the source's own date and credited to the publisher. Texts are in the official language shown above; the English is a translation where marked, and the original governs.
+**Outside git**, we also host this record publicly, for free:
 
-Sources and terms are in `LICENSE`; how it was built is in `REPRODUCE.md`. Not legal advice; for anything that matters, read the original.
+- **[Ask Claude about Macau law](https://global-law.lexifina.com/v1/try_claude?country=macau)**: opens Claude with a first question ready.
+- **[Ask ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=macau)**: the same question in ChatGPT.
+- **[Call the API in your browser](https://global-law.lexifina.com/v1/search_law?query=f%C3%A9rias&jurisdictions=macau)**: a search of Macau law for "férias", returned as JSON. See the [documentation here](https://lexifina.com/api/global-law).
 
-## Additional Assembly laws
+Both assistants read the record through the free Global law connector (MCP, `https://global-law.lexifina.com/mcp`); the first time, the chat gives you the link that adds it. Ask in Portuguese, in Chinese or in English.
 
-The following Portuguese official gazette publications have one whole-act text file each. Chinese terms quoted in the Portuguese text are retained. Their original wording has no reference in later Assembly law publications through 5 November 2026. This is a partial current-text record, with no reconstructed amendment history. Laws requiring amendment, repeal, text or annex review are not included. Future commencement belongs to the future branch.
+**Host it yourself easily.** All it takes is git and Python, and the tools run on your machine:
 
-| Folder | Law | Commencement |
-| --- | --- | --- |
-| `lei-15-2026/` | Lei n.º 15/2026: Alteração ao Regulamento do Imposto de Consumo, aprovado pela Lei n.º 4/99/M, de 13 de Dezembro | 2027-09-01 |
-| `lei-14-2026/` | Lei n.º 14/2026: Lei de uso das áreas marítimas | 2026-12-01 |
-| `lei-13-2026/` | Lei n.º 13/2026: Consolidação dos recursos financeiros do Fundo de Pensões | 2026-08-18 |
-| `lei-11-2026/` | Lei n.º 11/2026: Alteração à Lei n.º 11/2000 ‒ Lei Orgânica da Assembleia Legislativa da Região Administrativa Especial de Macau | 2026-10-01 |
-| `lei-10-2026/` | Lei n.º 10/2026: Alteração à Lei n.º 5/2011 – Regime de prevenção e controlo do tabagismo | 2027-01-01 |
-| `lei-9-2026/` | Lei n.º 9/2026: Alteração à Lei n.º 7/2008 ‒ Lei das relações de trabalho | 2027-01-01 |
-| `lei-8-2026/` | Lei n.º 8/2026: Lei da actividade das instituições privadas prestadoras de cuidados de saúde | 2026-12-01 |
-| `lei-7-2026/` | Lei n.º 7/2026: Lei da publicidade | 2027-01-01 |
-| `lei-6-2026/` | Lei n.º 6/2026: Alteração à Lei n.º 14/2021 ‒ Regime jurídico da construção urbana | 2026-07-01 |
-| `lei-4-2026/` | Lei n.º 4/2026: Regime da venda de artigos de ouro e de platina | 2027-01-01 |
-| `lei-3-2026/` | Lei n.º 3/2026: Alteração à Lei n.º 4/2010 ‒ Regime da Segurança Social e à Lei n.º 7/2017 ‒ Regime de previdência central não obrigatório | 2026-03-24 |
-| `lei-1-2026/` | Lei n.º 1/2026: Alteração à Lei n.º 9/2018 ‒ Criação do Instituto para os Assuntos Municipais | 2026-06-01 |
-| `lei-14-2025/` | Lei n.º 14/2025: Alteração à Lei n.º 5/2020 ‒ Salário mínimo para os trabalhadores | 2026-01-01 |
-| `lei-12-2025/` | Lei n.º 12/2025: Regime de supervisão e administração de dispositivos médicos | 2026-07-01 |
-| `lei-10-2025/` | Lei n.º 10/2025: Lei da contratação pública | 2026-09-01 |
-| `lei-9-2025/` | Lei n.º 9/2025: Alteração à Lei n.º 15/2009 – Disposições Fundamentais do Estatuto do Pessoal de Direcção e Chefia | 2025-11-01 |
-| `lei-7-2025/` | Lei n.º 7/2025: Alteração à Lei n.º 3/2000 – Da Legislatura e do Estatuto dos Deputados à Assembleia Legislativa | 2025-10-16 |
-| `lei-5-2025/` | Lei n.º 5/2025: Lei da actividade das agências de viagens e da profissão de guia turístico | 2026-02-01 |
-| `lei-4-2025/` | Lei n.º 4/2025: Lei da actividade de aviação civil | 2026-02-01 |
-| `lei-1-2025/` | Lei n.º 1/2025: Alteração à Lei n.º 3/2012 – Quadro geral do pessoal docente das escolas particulares do ensino não superior e à Lei n.º 15/2020 – Estatuto das escolas particulares do ensino não superior | 2025-06-01 |
-| `lei-22-2024/` | Lei n.º 22/2024: Regime de gestão dos vendilhões | 2025-03-01 |
-| `lei-21-2024/` | Lei n.º 21/2024: Regime jurídico das radiocomunicações | 2025-01-01 |
-| `lei-19-2024/` | Lei n.º 19/2024: Alteração ao regime da acção de despejo do Código de Processo Civil | 2025-03-01 |
-| `lei-17-2024/` | Lei n.º 17/2024: Alteração à Lei n.º 10/2000 ‒ Lei Orgânica do Comissariado contra a Corrupção da Região Administrativa Especial de Macau | 2024-10-01 |
-| `lei-14-2024/` | Lei n.º 14/2024: Regime da transmissão de fracções autónomas de edifícios afectados a habitação económica e habitação intermédia | 2024-09-01 |
-| `lei-13-2024/` | Lei n.º 13/2024: Alteração à Lei n.º 2/2020 ‒ Governação electrónica e à Lei n.º 5/2022 ‒ Envio de peças processuais e pagamento de custas por meios electrónicos | 2024-09-01 |
-| `lei-10-2024/` | Lei n.º 10/2024: Estabelece as normas fundamentais para a aplicação do Direito da Região Administrativa Especial de Macau nas áreas terrestre e marítima relevantes do lado sudeste do Posto Fronteiriço de Gongbei da Cidade de Zhuhai da Província de Guangdong | 2024-05-28 |
-| `lei-9-2024/` | Lei n.º 9/2024: Alteração à Lei n.º 4/1999 ‒ Lei dos juramentos por ocasião do acto de posse | 2024-05-28 |
-| `lei-8-2024/` | Lei n.º 8/2024: Alteração à Lei Eleitoral para a Assembleia Legislativa da Região Administrativa Especial de Macau | 2024-04-23 |
-| `lei-7-2024/` | Lei n.º 7/2024: Regime jurídico da concessão de crédito para jogos de fortuna ou azar em casino | 2024-08-01 |
-| `lei-6-2024/` | Lei n.º 6/2024: Lei sindical | 2025-03-31 |
-| `lei-3-2024/` | Lei n.º 3/2024: Regime jurídico da Universidade Politécnica de Macau | 2024-04-01 |
-| `lei-16-2023/` | Lei n.º 16/2023: Regime jurídico das empresas de capitais públicos | 2023-11-01 |
-| `lei-12-2023/` | Lei n.º 12/2023: Disposições específicas sobre a remuneração do pessoal que exerce funções específicas da Direcção dos Serviços de Educação e de Desenvolvimento da Juventude | 2023-09-01 |
-| `lei-9-2023/` | Lei n.º 9/2023: Regime da arbitragem necessária de litígios relativos a infiltrações de água em edifícios | 2023-09-01 |
-| `lei-7-2023/` | Lei n.º 7/2023: Regime jurídico de captação de quadros qualificados | 2023-07-01 |
-| `lei-2-2023/` | Lei n.º 2/2023: Lei da segurança e saúde ocupacional na construção civil | 2023-11-01 |
-| `lei-9-2022/` | Lei n.º 9/2022: Alteração à lista de doenças transmissíveis anexa à Lei n.º 2/2004 - Lei de prevenção, controlo e tratamento de doenças transmissíveis | 2022-07-26 |
-| `lei-6-2022/` | Lei n.º 6/2022: Exibição por meios electrónicos dos documentos necessários à condução de veículos | 2022-10-15 |
-| `lei-3-2022/` | Lei n.º 3/2022: Alteração à Lei n.º 3/2010 – Proibição de prestação ilegal de alojamento | 2022-04-01 |
-| `lei-2-2022/` | Lei n.º 2/2022: Alteração à Lei n.° 9/2006 - Lei de bases do sistema educativo não superior e à Lei n.º 10/2017 - Regime do ensino superior | 2022-06-01 |
-| `lei-20-2021/` | Lei n.º 20/2021: Alteração à Lei n.º 3/1999 - Publicação e formulário dos diplomas | 2022-01-01 |
-| `lei-9-2021/` | Lei n.º 9/2021: Lei de protecção dos direitos e interesses do consumidor | 2022-01-01 |
-| `lei-26-2020/` | Lei n.º 26/2020: Alteração à Lei n.º 9/2002 - Lei de Bases da Segurança Interna da Região Administrativa Especial de Macau | 2021-02-01 |
-| `lei-16-2020/` | Lei n.º 16/2020: Lei da actividade de agências de emprego | 2021-03-15 |
-| `lei-14-2020/` | Lei n.º 14/2020: Alteração à Lei n.º 5/2006 - Polícia Judiciária | 2020-10-12 |
-| `lei-13-2020/` | Lei n.º 13/2020: Alteração à Lei n.º 10/2011 ‒ Lei da habitação económica | 2020-08-18 |
-| `lei-12-2020/` | Lei n.º 12/2020: Alteração à Lei n.º 5/2003 - Autorização para a contracção de dívidas pelo Governo da Região Administrativa Especial de Macau | 2020-08-18 |
-| `lei-10-2020/` | Lei n.º 10/2020: Alteração à Lei n.º 21/2009 ‒ Lei da contratação de trabalhadores não residentes | 2020-10-05 |
-| `lei-7-2020/` | Lei n.º 7/2020: Lei de controlo sanitário animal | 2020-09-01 |
-| `lei-4-2020/` | Lei n.º 4/2020: Alteração à Lei n.º 11/2009 – Lei de combate à criminalidade informática | 2020-07-01 |
-| `lei-1-2020/` | Lei n.º 1/2020: Estabelece as normas fundamentais para a aplicação do Direito da Região Administrativa Especial de Macau na Zona do Posto Fronteiriço da Parte de Macau do Posto Fronteiriço Hengqin e nas suas zonas contíguas | 2020-03-18 |
-| `lei-16-2019/` | Lei n.º 16/2019: Restrições ao fornecimento de sacos de plástico | 2019-11-18 |
-| `lei-14-2019/` | Lei n.º 14/2019: Consolidação dos recursos financeiros do Fundo de Segurança Social | 2019-08-13 |
-| `lei-11-2019/` | Lei n.º 11/2019: Alteração à Lei n.º 7/2015 ‒ Salário mínimo para os trabalhadores de limpeza e de segurança na actividade de administração predial | 2019-09-01 |
-| `lei-9-2019/` | Lei n.º 9/2019: Alteração à Lei n.º 8/2014 – Prevenção e controlo do ruído ambiental | 2019-04-30 |
-| `lei-8-2019/` | Lei n.º 8/2019: Regime jurídico de habitação para alojamento temporário e de habitação para troca no âmbito da renovação urbana | 2019-04-24 |
-| `lei-7-2019/` | Lei n.º 7/2019: Regime do benefício fiscal para a locação financeira | 2019-04-09 |
-| `lei-17-2018/` | Lei n.º 17/2018: Alteração à Lei n.º 10/2012 – Condicionamento da entrada, do trabalho e do jogo nos casinos | 2018-12-28 |
-| `lei-16-2018/` | Lei n.º 16/2018: Actualização dos índices mínimos das pensões de aposentação e de sobrevivência | 2019-01-01 |
-| `lei-15-2018/` | Lei n.º 15/2018: Revogação do regime jurídico do exercício da actividade 《offshore》 | 2018-12-28 |
-| `lei-12-2018/` | Lei n.º 12/2018: Regime jurídico de garantias dos direitos e interesses dos idosos | 2018-11-19 |
-| `lei-11-2018/` | Lei n.º 11/2018: Alteração à Lei n.º 2/93/M, de 17 de Maio – Direito de Reunião e de Manifestação | 2018-09-13 |
-| `lei-10-2018/` | Lei n.º 10/2018: Benefício fiscal especial para a aquisição de veículos motorizados | 2018-08-14 |
+```sh
+git clone --depth 1 https://github.com/lexifina/global-law && cd global-law
+python3 tools/countries.py add macau/national/acts
+python3 tools/law.py show 2026-01-01 macau/national/acts/lei-relacoes-trabalho/art-046.md
+```
 
-Source: Legislative Assembly of the Macao SAR, official gazette publications. No licence is stated. This selection does not provide all Assembly laws or pre-1999 decree-laws.
+Opened in Claude Code, Cursor, VS Code or Codex, the clone also starts a local MCP server with the same tools ([MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md)).
+
+## Dates
+
+Each commit is dated at noon, Asia/Macau (UTC+8), on the day in its `In-force:` trailer:
+
+- the Basic Law: 20 December 1999, the day it was implemented; the Annexes: 30 June 2012, the latest date on the Legislative Assembly's page, which shows the 2012 amendments beside the original text;
+- the four codes and Lei n.º 7/2008: the day the Boletim Oficial's page showed the updated text used (13 February to 17 September 2025). It is not the day the text took effect, since the page gives no consolidation date; each act's original publication is in `REPRODUCE.md`;
+- each Assembly law: the commencement day in the Assembly's list of laws, or the law's own commencement clause where the list gives none.
+
+Every commit is credited to its publisher as the "oldest version available": `Legislative Assembly of the Macao SAR (al.gov.mo)` for the Basic Law, the Annexes and the Assembly laws, `Imprensa Oficial da RAEM (Boletim Oficial)` for the codes and Lei n.º 7/2008. No change is yet credited to the law that made it.
+
+## How it is checked
+
+- `tools/check_repo.py` reads every version back from git on the day it took effect and on the day before and compares it with the corpus: 0 mismatches (see [`REPRODUCE.md`](REPRODUCE.md)).
+- An Assembly law is included only while no later Assembly law published through 5 November 2026 refers to it, so its text as first published is taken as its current text; amendments and repeals are not guessed, and laws whose text or annexes need review are held back.
+- Every commit's trailers parse; there are no merge commits on `main` and no commit dated after the build. No second build has been compared yet.
+
+## What it does not show
+
+- **Earlier versions.** Each act has one text; the codes' footnotes naming the laws that amended them are left out, and no change is credited to an amending law.
+- **Most of Macau's law.** No Assembly law from before 2018 and only part of those since, no decree-law from before 1999 other than the four codes, and no administrative regulations.
+- **Seven laws not yet in force** (Lei n.º 4, 7, 8, 9, 10, 14 and 15/2026, taking effect from 1 December 2026 to 1 September 2027): their folders hold only a README, without the text.
+- **The other official language.** The codes and laws are here in Portuguese only, the Basic Law in Chinese only.
+- **Case law.** No court decisions are part of this record.
+
+## Sources
+
+| Source | Kind | Past versions | Notes |
+| --- | --- | --- | --- |
+| [Legislative Assembly of the Macao SAR: Basic Law](https://www.al.gov.mo/zh-hant/basic-law.html) | The Basic Law and its Annexes, in Chinese | no | The Annexes with the 2012 amendments beside the original text |
+| [Boletim Oficial](https://bo.io.gov.mo/) (Imprensa Oficial) | Updated texts of the four codes and Lei n.º 7/2008, in Portuguese | no, the updated text only | The site's footnotes pointing to amending laws are left out |
+| [Legislative Assembly of the Macao SAR: laws](https://www.al.gov.mo/pt/law.html) | The list of laws since 1999, with each law's Boletim Oficial (I série) text | no, the text as first published | The Portuguese text; the commencement day from the list |
+
+## Licence
+
+See [`LICENSE`](LICENSE). The sources state no licence: the Basic Law (from the Legislative Assembly's website) and the codes and laws (from the Boletim Oficial, published by the Imprensa Oficial) are official legal texts, reproduced for reference with attribution to their publishers. The arrangement of this repository, its commit messages and tools are by Lexifina, under the Creative Commons Attribution 4.0 International licence.
+
+No AI model wrote, translated or corrected legal text, and none runs when the history is built; the scripts were written by AI models, Claude Opus 5.5 and GPT-6 (see [`REPRODUCE.md`](REPRODUCE.md)).
+
+## More
+
+From [lexifina/global-law](https://github.com/lexifina/global-law):
+
+- [FEATURES.md](https://github.com/lexifina/global-law/blob/main/FEATURES.md): every feature, and what every corpus must support (`git blame`, `law.py`, the MCP tools)
+- [FAQ.md](https://github.com/lexifina/global-law/blob/main/FAQ.md): questions and answers · [CONTRIBUTING.md](https://github.com/lexifina/global-law/blob/main/CONTRIBUTING.md): proposing changes · [MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md): the MCP server · [REPRODUCE.md](https://github.com/lexifina/global-law/blob/main/REPRODUCE.md): how it was built · [CHANGELOG.md](https://github.com/lexifina/global-law/blob/main/CHANGELOG.md)
+- [FRESHNESS.md](https://github.com/lexifina/global-law/blob/main/FRESHNESS.md): how current each corpus is · [Monitoring](https://github.com/lexifina/global-law/tree/main/monitoring): whether updates are running · [WATCHING.md](https://github.com/lexifina/global-law/blob/main/WATCHING.md): how each official source is watched for changes
+- [performance/](https://github.com/lexifina/global-law/tree/main/performance): how fast the tools are, measured
+- [visualisations/](https://github.com/lexifina/global-law/tree/main/visualisations): charts and bridges across the world's law
+- [Vulnerabilities](https://github.com/lexifina/global-law/tree/main/vulnerabilities): mistakes in legislation as published

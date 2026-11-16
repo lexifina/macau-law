@@ -1,34 +1,41 @@
-# Macau: law history in git
+# Macau: a história do direito em git
 
-The law of Macau as a git history: one file per article (one file per law for the recent laws of the Legislative Assembly), one commit per version on the day in its `In-force:` trailer, and the act that made each change as the commit's author. So far every act has one version, credited to its publisher instead: `git blame` and `git log` name where each text came from; picking a date gives the text the record holds for that day.
+**Português** · [English](README.en.md)
 
-Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Macau's national law, which global-law reads at `macau/national/acts/`.
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="data/pt/effort-dark.svg">
+<img alt="O direito de Macau neste repositório: o que contém, as alterações por ano de entrada em vigor, a completude face às fontes oficiais e a exatidão do conteúdo" src="data/pt/effort-light.svg" width="880">
+</picture>
 
-**What is in it now:** 64 acts, each with one version: the Basic Law (preamble and 145 articles) and its three Annexes, in Chinese; the Civil, Commercial, Penal and Criminal Procedure Codes and Lei n.º 7/2008, the Labour Relations Law, as updated texts in Portuguese; and 57 laws of the Legislative Assembly of 2018 to 2026, each as first published, in Portuguese. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its version and how each was chosen.
+O direito de Macau como uma história git: um ficheiro por artigo (um ficheiro por lei para as leis recentes da Assembleia Legislativa), um commit por versão no dia indicado no seu trailer `In-force:` e, como autor do commit, o ato que fez cada alteração. Até agora, cada ato tem uma só versão, atribuída em vez disso ao seu editor: `git blame` e `git log` indicam de onde veio cada texto; escolhendo uma data, obtém-se o texto que o registo contém para esse dia.
 
-The codes are in `code/` (`code/codigo-civil/art-001.md` is Article 1 of the Código Civil), the Assembly laws in `lei/<year>/<number>/texto.md` (`lei/2024/6/texto.md` is Lei n.º 6/2024, the Lei sindical), the Labour Relations Law in `lei-relacoes-trabalho/` (`art-046.md` is Article 46, Direito a férias), the Basic Law in `basic-law/` and its Annexes in `annexes/`. [`data/paths.json`](data/paths.json) maps each act id to its folder.
+Faz parte de [lexifina/global-law](https://github.com/lexifina/global-law), uma única história git do direito de todos os países: este é o direito nacional de Macau, que o global-law lê em `macau/national/acts/`.
 
-The text is in Macau's two official languages, as the sources print it: Chinese (traditional) for the Basic Law and its Annexes, Portuguese for the rest. An English translation is not part of this record.
+**O que contém por agora:** 64 atos, cada um com uma só versão: a Lei Básica (preâmbulo e 145 artigos) e os seus três Anexos, em chinês; os Códigos Civil, Comercial, Penal e de Processo Penal e a Lei n.º 7/2008, a Lei das relações de trabalho, em textos atualizados em português; e 57 leis da Assembleia Legislativa de 2018 a 2026, cada uma tal como publicada pela primeira vez, em português. [`REPRODUCE.md`](REPRODUCE.md) lista todos os atos com a respetiva versão e o modo como cada uma foi escolhida.
 
-## Questions as git commands
+Os códigos estão em `code/` (`code/codigo-civil/art-001.md` é o artigo 1.º do Código Civil), as leis da Assembleia em `lei/<year>/<number>/texto.md` (`lei/2024/6/texto.md` é a Lei n.º 6/2024, Lei sindical), a Lei das relações de trabalho em `lei-relacoes-trabalho/` (`art-046.md` é o artigo 46.º, Direito a férias), a Lei Básica em `basic-law/` e os seus Anexos em `annexes/`. [`data/paths.json`](data/paths.json) faz corresponder a cada identificador de ato a sua pasta.
 
-| Question | Command |
+O texto está nas duas línguas oficiais de Macau, tal como as fontes o publicam: chinês (tradicional) para a Lei Básica e os seus Anexos, português para o resto. Não faz parte deste registo nenhuma tradução inglesa.
+
+## Perguntas como comandos git
+
+| Pergunta | Comando |
 | --- | --- |
-| Every change to Article 46 of the Labour Relations Law | `git log -p --word-diff -- lei-relacoes-trabalho/art-046.md` |
-| Who is credited with each line of Article 46? | `git blame lei-relacoes-trabalho/art-046.md` |
-| Every version of the Labour Relations Law, with its day | `git log --format="%h %(trailers:key=In-force,valueonly,separator=) %an" -- lei-relacoes-trabalho ':!lei-relacoes-trabalho/README.md'` |
-| Article 46 as the record holds it on 1 January 2026 | `python tools/on.py 2026-01-01 lei-relacoes-trabalho art-046` |
+| Todas as alterações ao artigo 46.º da Lei das relações de trabalho | `git log -p --word-diff -- lei-relacoes-trabalho/art-046.md` |
+| A quem é atribuída cada linha do artigo 46.º? | `git blame lei-relacoes-trabalho/art-046.md` |
+| Todas as versões da Lei das relações de trabalho, com o respetivo dia | `git log --format="%h %(trailers:key=In-force,valueonly,separator=) %an" -- lei-relacoes-trabalho ':!lei-relacoes-trabalho/README.md'` |
+| O artigo 46.º tal como o registo o contém em 1 de janeiro de 2026 | `python tools/on.py 2026-01-01 lei-relacoes-trabalho art-046` |
 
-**Outside git**, we also host this record publicly, for free:
+**Fora do git**, também disponibilizamos este registo publicamente e de forma gratuita:
 
-- **[Ask Claude about Macau law](https://global-law.lexifina.com/v1/try_claude?country=macau)**: opens Claude with a first question ready.
-- **[Ask ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=macau)**: the same question in ChatGPT.
-- **[Search Macau law on our site](https://lexifina.com/law?country=macau&q=f%C3%A9rias)**: a search for "férias", with each provision's text and its versions, no account needed.
-- **[Developer REST API](https://global-law.lexifina.com/v1/search_law?query=f%C3%A9rias&jurisdiction=macau)**: the same search as JSON, with no key. See the [documentation here](https://lexifina.com/api/global-law).
+- **[Perguntar ao Claude sobre o direito de Macau](https://global-law.lexifina.com/v1/try_claude?country=macau)**: abre o Claude com uma primeira pergunta já preparada.
+- **[Perguntar ao ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=macau)**: a mesma pergunta no ChatGPT.
+- **[Pesquisar o direito de Macau no nosso sítio](https://lexifina.com/law?country=macau&q=f%C3%A9rias)**: uma pesquisa por "férias", com o texto de cada disposição e as suas versões, sem necessidade de conta.
+- **[API REST para programadores](https://global-law.lexifina.com/v1/search_law?query=f%C3%A9rias&jurisdiction=macau)**: a mesma pesquisa em JSON, sem chave. Veja a [documentação aqui](https://lexifina.com/api/global-law).
 
-Both assistants read the record through the free Global law connector (MCP, `https://global-law.lexifina.com/mcp`); the first time, the chat gives you the link that adds it. Ask in Portuguese, in Chinese or in English.
+Ambos os assistentes leem o registo através do conector gratuito Global law (MCP, `https://global-law.lexifina.com/mcp`); da primeira vez, a conversa dá-lhe a ligação que o adiciona. Pergunte em português, em chinês ou em inglês.
 
-**Host it yourself easily.** All it takes is git and Python, and the tools run on your machine:
+**Aloje-o facilmente por conta própria.** Basta ter git e Python, e as ferramentas correm na sua máquina:
 
 ```sh
 git clone --depth 1 https://github.com/lexifina/global-law && cd global-law
@@ -36,53 +43,55 @@ python3 tools/countries.py add macau/national/acts
 python3 tools/law.py show 2026-01-01 macau/national/acts/lei-relacoes-trabalho/art-046.md
 ```
 
-Opened in Claude Code, Cursor, VS Code or Codex, the clone also starts a local MCP server with the same tools ([MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md)).
+Aberto no Claude Code, no Cursor, no VS Code ou no Codex, o clone inicia também um servidor MCP local com as mesmas ferramentas ([MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md)).
 
-## Dates
+## Datas
 
-Each commit is dated at noon, Asia/Macau (UTC+8), on the day in its `In-force:` trailer:
+Cada commit tem a data do meio-dia, hora de Asia/Macau (UTC+8), do dia indicado no seu trailer `In-force:`:
 
-- the Basic Law: 20 December 1999, the day it was implemented; the Annexes: 30 June 2012, the latest date on the Legislative Assembly's page, which shows the 2012 amendments beside the original text;
-- the four codes and Lei n.º 7/2008: the day the Boletim Oficial's page showed the updated text used (13 February to 17 September 2025). It is not the day the text took effect, since the page gives no consolidation date; each act's original publication is in `REPRODUCE.md`;
-- each Assembly law: the commencement day in the Assembly's list of laws, or the law's own commencement clause where the list gives none.
+- a Lei Básica: 20 de dezembro de 1999, o dia em que começou a ser aplicada; os Anexos: 30 de junho de 2012, a data mais recente na página da Assembleia Legislativa, que mostra as alterações de 2012 ao lado do texto original;
+- os quatro códigos e a Lei n.º 7/2008: o dia em que a página do Boletim Oficial mostrava o texto atualizado utilizado (de 13 de fevereiro a 17 de setembro de 2025). Não é o dia em que o texto começou a produzir efeitos, já que a página não indica nenhuma data de consolidação; a publicação original de cada ato consta do `REPRODUCE.md`;
+- cada lei da Assembleia: o dia de entrada em vigor indicado na lista de leis da Assembleia ou, quando a lista não o indica, na norma de entrada em vigor da própria lei.
 
-Every commit is credited to its publisher as the "oldest version available": `Legislative Assembly of the Macao SAR (al.gov.mo)` for the Basic Law, the Annexes and the Assembly laws, `Imprensa Oficial da RAEM (Boletim Oficial)` for the codes and Lei n.º 7/2008. No change is yet credited to the law that made it.
+Cada commit é atribuído ao seu editor como "versão mais antiga disponível": `Legislative Assembly of the Macao SAR (al.gov.mo)` para a Lei Básica, os Anexos e as leis da Assembleia, `Imprensa Oficial da RAEM (Boletim Oficial)` para os códigos e a Lei n.º 7/2008. Nenhuma alteração é ainda atribuída à lei que a fez.
 
-## How it is checked
+## Como é verificado
 
-- `tools/check_repo.py` reads every version back from git on the day it took effect and on the day before and compares it with the corpus: 0 mismatches (see [`REPRODUCE.md`](REPRODUCE.md)).
-- An Assembly law is included only while no later Assembly law published through 5 November 2026 refers to it, so its text as first published is taken as its current text; amendments and repeals are not guessed, and laws whose text or annexes need review are held back.
-- Every commit's trailers parse; there are no merge commits on `main` and no commit dated after the build. No second build has been compared yet.
+- `tools/check_repo.py` relê a partir do git cada versão no dia em que entrou em vigor e no dia anterior e compara-a com o corpus: 0 divergências (ver [`REPRODUCE.md`](REPRODUCE.md)).
+- Uma lei da Assembleia só é incluída enquanto nenhuma lei posterior da Assembleia publicada até 5 de novembro de 2026 se referir a ela, pelo que o seu texto tal como publicado pela primeira vez é tomado como o seu texto atual; não se presumem alterações nem revogações, e as leis cujo texto ou anexos precisam de revisão ficam retidas.
+- Os trailers de todos os commits são legíveis; não há commits de fusão (merge) no `main` nem nenhum commit com data posterior à construção. Ainda não foi comparada uma segunda construção.
 
-## What it does not show
+## O que não mostra
 
-- **Earlier versions.** Each act has one text; the codes' footnotes naming the laws that amended them are left out, and no change is credited to an amending law.
-- **Most of Macau's law.** No Assembly law from before 2018 and only part of those since, no decree-law from before 1999 other than the four codes, and no administrative regulations.
-- **Seven laws not yet in force** (Lei n.º 4, 7, 8, 9, 10, 14 and 15/2026, taking effect from 1 December 2026 to 1 September 2027): their folders hold only a README, without the text.
-- **The other official language.** The codes and laws are here in Portuguese only, the Basic Law in Chinese only.
-- **Case law.** No court decisions are part of this record.
+- **Versões anteriores.** Cada ato tem um só texto; as notas de rodapé dos códigos que indicam as leis que os alteraram ficam de fora, e nenhuma alteração é atribuída a uma lei de alteração.
+- **A maior parte do direito de Macau.** Nenhuma lei da Assembleia anterior a 2018 e apenas parte das posteriores, nenhum decreto-lei anterior a 1999 além dos quatro códigos, e nenhum regulamento administrativo.
+- **Sete leis ainda não em vigor** (Lei n.º 4, 7, 8, 9, 10, 14 e 15/2026, que entram em vigor entre 1 de dezembro de 2026 e 1 de setembro de 2027): as suas pastas contêm apenas um README, sem o texto.
+- **A outra língua oficial.** Os códigos e as leis estão aqui apenas em português, a Lei Básica apenas em chinês.
+- **Jurisprudência.** Nenhuma decisão judicial faz parte deste registo.
 
-## Sources
+## Fontes
 
-| Source | Kind | Past versions | Notes |
+| Fonte | Tipo | Versões anteriores | Notas |
 | --- | --- | --- | --- |
-| [Legislative Assembly of the Macao SAR: Basic Law](https://www.al.gov.mo/zh-hant/basic-law.html) | The Basic Law and its Annexes, in Chinese | no | The Annexes with the 2012 amendments beside the original text |
-| [Boletim Oficial](https://bo.io.gov.mo/) (Imprensa Oficial) | Updated texts of the four codes and Lei n.º 7/2008, in Portuguese | no, the updated text only | The site's footnotes pointing to amending laws are left out |
-| [Legislative Assembly of the Macao SAR: laws](https://www.al.gov.mo/pt/law.html) | The list of laws since 1999, with each law's Boletim Oficial (I série) text | no, the text as first published | The Portuguese text; the commencement day from the list |
+| [Assembleia Legislativa da RAEM: Lei Básica](https://www.al.gov.mo/zh-hant/basic-law.html) | A Lei Básica e os seus Anexos, em chinês | não | Os Anexos com as alterações de 2012 ao lado do texto original |
+| [Boletim Oficial](https://bo.io.gov.mo/) (Imprensa Oficial) | Textos atualizados dos quatro códigos e da Lei n.º 7/2008, em português | não, apenas o texto atualizado | As notas de rodapé do sítio que remetem para as leis de alteração ficam de fora |
+| [Assembleia Legislativa da RAEM: leis](https://www.al.gov.mo/pt/law.html) | A lista das leis desde 1999, com o texto de cada lei no Boletim Oficial (I série) | não, o texto tal como publicado pela primeira vez | O texto em português; o dia de entrada em vigor, da lista |
 
-## Licence
+## Licença
 
-See [`LICENSE`](LICENSE). The sources state no licence: the Basic Law (from the Legislative Assembly's website) and the codes and laws (from the Boletim Oficial, published by the Imprensa Oficial) are official legal texts, reproduced for reference with attribution to their publishers. The arrangement of this repository, its commit messages and tools are by Lexifina, under the Creative Commons Attribution 4.0 International licence.
+Veja [`LICENSE`](LICENSE). As fontes não indicam nenhuma licença: a Lei Básica (do sítio da Assembleia Legislativa) e os códigos e leis (do Boletim Oficial, publicado pela Imprensa Oficial) são textos jurídicos oficiais, reproduzidos para consulta com atribuição aos seus editores. A organização deste repositório, as mensagens de commit e as ferramentas são da Lexifina, sob a licença Creative Commons Atribuição 4.0 Internacional.
 
-No AI model wrote, translated or corrected legal text, and none runs when the history is built; the scripts were written by AI models, Claude Opus 5.5 and GPT-6 (see [`REPRODUCE.md`](REPRODUCE.md)).
+Nenhum modelo de IA escreveu, traduziu ou corrigiu texto jurídico, e nenhum é executado quando a história é construída; os scripts foram escritos por modelos de IA, Claude Opus 5.5 e GPT-6 (veja [`REPRODUCE.md`](REPRODUCE.md)).
 
-## More
+Esta é uma tradução da versão inglesa ([README.en.md](README.en.md)); em caso de divergência, prevalece a versão inglesa.
 
-From [lexifina/global-law](https://github.com/lexifina/global-law):
+## Mais informação
 
-- [FEATURES.md](https://github.com/lexifina/global-law/blob/main/FEATURES.md): every feature, and what every corpus must support (`git blame`, `law.py`, the MCP tools)
-- [FAQ.md](https://github.com/lexifina/global-law/blob/main/FAQ.md): questions and answers · [CONTRIBUTING.md](https://github.com/lexifina/global-law/blob/main/CONTRIBUTING.md): proposing changes · [MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md): the MCP server · [REPRODUCE.md](https://github.com/lexifina/global-law/blob/main/REPRODUCE.md): how it was built · [CHANGELOG.md](https://github.com/lexifina/global-law/blob/main/CHANGELOG.md)
-- [FRESHNESS.md](https://github.com/lexifina/global-law/blob/main/FRESHNESS.md): how current each corpus is · [Monitoring](https://github.com/lexifina/global-law/tree/main/monitoring): whether updates are running · [WATCHING.md](https://github.com/lexifina/global-law/blob/main/WATCHING.md): how each official source is watched for changes
-- [performance/](https://github.com/lexifina/global-law/tree/main/performance): how fast the tools are, measured
-- [visualisations/](https://github.com/lexifina/global-law/tree/main/visualisations): charts and bridges across the world's law
-- [Vulnerabilities](https://github.com/lexifina/global-law/tree/main/vulnerabilities): mistakes in legislation as published
+Do repositório [lexifina/global-law](https://github.com/lexifina/global-law) (páginas em inglês):
+
+- [FEATURES.md](https://github.com/lexifina/global-law/blob/main/FEATURES.md): todas as funcionalidades e o que cada corpus tem de suportar (`git blame`, `law.py`, ferramentas MCP)
+- [FAQ.md](https://github.com/lexifina/global-law/blob/main/FAQ.md): perguntas e respostas · [CONTRIBUTING.md](https://github.com/lexifina/global-law/blob/main/CONTRIBUTING.md): propor alterações · [MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md): servidor MCP · [REPRODUCE.md](https://github.com/lexifina/global-law/blob/main/REPRODUCE.md): como foi construído · [CHANGELOG.md](https://github.com/lexifina/global-law/blob/main/CHANGELOG.md)
+- [FRESHNESS.md](https://github.com/lexifina/global-law/blob/main/FRESHNESS.md): quão atualizado está cada corpus · [Monitorização](https://github.com/lexifina/global-law/tree/main/monitoring): se as atualizações estão a funcionar · [WATCHING.md](https://github.com/lexifina/global-law/blob/main/WATCHING.md): como cada fonte oficial é vigiada para detetar alterações
+- [performance/](https://github.com/lexifina/global-law/tree/main/performance): a rapidez das ferramentas, medida
+- [visualisations/](https://github.com/lexifina/global-law/tree/main/visualisations): gráficos e ligações através do direito de todo o mundo
+- [Vulnerabilidades](https://github.com/lexifina/global-law/tree/main/vulnerabilities): erros nos diplomas tal como foram publicados

@@ -1,0 +1,26 @@
+# Casos-limite
+
+**Português** · [English](EDGE-CASES.en.md)
+
+Os 4 alertas, cada um verificado à mão, e o que eram os 12 alertas que as correções para o português tal como é escrito em Macau eliminaram. Nenhum resistiu à revisão pelo modelo. Voltar ao [README das vulnerabilidades](README.md).
+
+## Esgotados (2)
+
+| Ato | O que diz o registo | Porque já não tem consequências |
+| --- | --- | --- |
+| [Lei n.º 22/2024](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2024/22/texto.md) (Regime de gestão dos vendilhões), n.os 4 e 7 do artigo 20.º | os titulares de licença de vendilhão que optaram por manter a titularidade só a podem manter válida "até 31 de Dezembro de 2025" se prestarem a caução referida no artigo 7.º no prazo de 90 dias a contar da entrada em vigor da lei; o mesmo vale para os residentes de Wanzai que já possuem licença (n.º 7) | Uma regra transitória para as licenças que existiam quando a lei entrou em vigor, em 1 de março de 2025 (artigo 30.º); esgotou-se nos seus próprios termos. Este repositório só inclui uma lei da Assembleia enquanto nenhuma lei posterior da Assembleia publicada até 5 de novembro de 2026 se lhe referir, pelo que nenhuma lei nele prorrogou a data. |
+
+## Lidos erradamente por um detetor (2)
+
+| Ato | O que diz o registo | O que aconteceu |
+| --- | --- | --- |
+| [Lei n.º 10/2018](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2018/10/texto.md) (Benefício fiscal especial para a aquisição de veículos motorizados), alínea 1) do artigo 2.º | "veículos danificados" são os veículos motorizados cuja matrícula foi cancelada mediante requerimento apresentado na DSAT "até 18 de Setembro de 2017" e que esta confirme terem sido submersos ou esmagados em Macau durante a passagem do tufão «Hato» | A data define os veículos que o benefício abrange, e não o termo de uma regra. A lei entrou em vigor em 14 de agosto de 2018, depois dessa data, e o benefício abrange os veículos novos adquiridos desde 23 de agosto de 2017 até dois anos após essa entrada em vigor (alínea 4) do artigo 2.º). |
+| [Lei n.º 10/2018](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2018/10/texto.md), n.º 2 do artigo 5.º | o período de utilização dos veículos danificados conta-se a partir da data do primeiro registo "até ao dia 23 de Agosto de 2017" | O dia que a lei toma para o tufão «Hato» (o proprietário nesse dia, alínea 2) do artigo 2.º; os veículos novos adquiridos desde esse dia, alínea 4) do artigo 2.º): é o termo do período de utilização com base no qual se calcula o benefício (a tabela anexa de taxas por período de utilização, n.º 1 do artigo 4.º), e não um prazo. Este alerta é novo: antes da correção, a pesquisa de prazos não lia "até ao dia". |
+
+## Os outros alertas
+
+- **Prazos expirados antes da correção:** 7, dos quais 4 eram o "do" português lido como o "do" eslavo ("até"): o n.º 2 do artigo 7.º da [Lei n.º 15/2018](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2018/15/texto.md) (Revogação do regime jurídico do exercício da actividade offshore), "O artigo 6.º produz efeitos a partir do dia 1 de Janeiro de 2021", e o n.º 2 do artigo 65.º, o n.º 2 do artigo 66.º e o n.º 1 do artigo 67.º da [Lei n.º 12/2025](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2025/12/texto.md) (Regime de supervisão e administração de dispositivos médicos), cujos períodos transitórios vão "Do dia 1 de Julho de 2026 até ao dia 30 de Junho de 2027" e semelhantes. O início de um período foi lido como o seu termo. Os outros 3 alertas estão entre os 4 acima; depois da correção, todos os períodos da Lei n.º 12/2025 terminam em 2027 ou mais tarde.
+- **Numeração duplicada antes da correção:** 8, nenhum uma verdadeira duplicação. Nas leis da Assembleia, guardadas como um só texto com as linhas cortadas como no Boletim Oficial, uma linha que começa por uma remissão foi lida como epígrafe de artigo: "artigo 71.º da Lei Básica da Região Administrativa Especial de" duas vezes nas Leis n.os 17/2018, 4/2020, 9/2024, 7/2025 e 11/2026, na fórmula de aprovação de cada lei e na da lei que republica em anexo, "artigo 26.º" duas vezes na Lei n.º 13/2020, "artigo 5.º" três vezes na Lei n.º 9/2023 e "artigo 33.º da Lei Eleitoral para a Assembleia Legislativa" na Lei n.º 7/2025. Depois da correção, nenhum.
+- **Lacunas após a revogação, alterações no mesmo dia, vigência anterior à publicação, períodos de vazio normativo, montantes desatualizados, remissões para disposições suprimidas:** nenhum. Cada ato tem uma só versão, atribuída ao seu editor, pelo que o texto de nenhuma disposição muda na história e não há nada a comparar. O próprio repositório o diz: nenhuma alteração é ainda atribuída à lei que a fez.
+- **Remissões para disposições revogadas, sanções sem norma:** nenhum. O texto de nenhuma disposição é apenas "(Revogado)"; os dois artigos do Código Comercial que o Boletim Oficial assinala como revogados conservam o texto (ver o README).
+- **Moedas extintas, notas do editor:** nenhum. Os montantes estão em patacas, a moeda em curso, e nenhum texto refere o escudo; o detetor não encontrou nenhuma nota de que uma alteração não pudesse ser executada.

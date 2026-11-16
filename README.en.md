@@ -60,6 +60,7 @@ Every commit is credited to its publisher as the "oldest version available": `Le
 - `tools/check_repo.py` reads every version back from git on the day it took effect and on the day before and compares it with the corpus: 0 mismatches (see [`REPRODUCE.md`](REPRODUCE.md)).
 - An Assembly law is included only while no later Assembly law published through 5 November 2026 refers to it, so its text as first published is taken as its current text; amendments and repeals are not guessed, and laws whose text or annexes need review are held back.
 - Every commit's trailers parse; there are no merge commits on `main` and no commit dated after the build. No second build has been compared yet.
+- [vulnerabilities/](vulnerabilities/README.en.md): possible drafting mistakes in Macau law, found by global-law's detectors and checked by hand.
 
 ## What it does not show
 

@@ -60,6 +60,7 @@ Cada commit é atribuído ao seu editor como "versão mais antiga disponível": 
 - `tools/check_repo.py` relê a partir do git cada versão no dia em que entrou em vigor e no dia anterior e compara-a com o corpus: 0 divergências (ver [`REPRODUCE.md`](REPRODUCE.md)).
 - Uma lei da Assembleia só é incluída enquanto nenhuma lei posterior da Assembleia publicada até 5 de novembro de 2026 se referir a ela, pelo que o seu texto tal como publicado pela primeira vez é tomado como o seu texto atual; não se presumem alterações nem revogações, e as leis cujo texto ou anexos precisam de revisão ficam retidas.
 - Os trailers de todos os commits são legíveis; não há commits de fusão (merge) no `main` nem nenhum commit com data posterior à construção. Ainda não foi comparada uma segunda construção.
+- [vulnerabilities/](vulnerabilities/): possíveis erros de técnica legislativa no direito de Macau, encontrados pelos detetores do global-law e verificados à mão.
 
 ## O que não mostra
 

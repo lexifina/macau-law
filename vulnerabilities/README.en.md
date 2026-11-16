@@ -1,0 +1,52 @@
+# Vulnerabilities in Macau law
+
+[Português](README.md) · **English**
+
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="img/flags-by-category-dark.svg">
+<img alt="4 flags in one category: lapsed time limits 4, all in law texts" src="img/flags-by-category.svg" width="880">
+</picture>
+
+The vulnerability detectors from [lexifina/global-law](https://github.com/lexifina/global-law/tree/main/vulnerabilities) look for mechanical mistakes in legislation: a rule applying "until" a date that has passed, a time limit extended only after it had run out, an amount changed in one provision but not in another, a reference to an article that has been repealed. global-law's published list (9 November 2026) did not include Macau, so this is a run over this repository only, as it stood at commit [`92c2f4c`](https://github.com/lexifina/macau-law/commit/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d) on 16 November 2026: the Basic Law and its three Annexes in Chinese, the Civil, Commercial, Criminal and Criminal Procedure Codes and Law 7/2008 (the Labour Relations Law) in their updated Portuguese text, and 57 laws of the Legislative Assembly from 2018 to 2026 as first published.
+
+**In short:** the detectors raised 4 flags, all lapsed time limits, in two laws. A language model reviewed all 4, arguing each one for and against; none survived, and none is a mistake in Macau law when read by hand. Two are a transitional rule that ran out as planned: under Article 20(4) and (7) of Law 22/2024 (the hawkers' regime), existing hawker licences stayed valid "until 31 December 2025" if the holder lodged the deposit. The other two are dates that fix who a one-off tax benefit covers, not the end of a rule: Law 10/2018 relieves the owners of vehicles damaged by Typhoon Hato, vehicles whose registration was cancelled at the request filed "by 18 September 2017" (Article 2(1)), with their period of use counted "up to 23 August 2017" (Article 5(2)). Every act in this repository has one version so far, credited to its publisher, so no provision's text ever changes in its history, and the detectors that compare versions (repeal gaps, same-day conflicts, retroactive dates, empty periods, stale amounts, references to deleted provisions) had nothing to compare. Before the fixes for Portuguese as written in Macau, the detectors raised 15 flags; the fixes removed 12, all misreadings, and added one (below). Reading the flagged laws and their neighbours turned up problems in how this repository cuts some texts, listed below. Later, this will be formalised in Lean, similar to our work on [the US tax code](https://lexifina.com/blog/formalizing-the-us-tax-code) and [US case law](https://lexifina.com/blog/formalizing-all-us-case-law-in-lean).
+
+A flag is a prompt to look, not legal advice, and nothing here has been tested in court.
+
+## Flags by category
+
+| Category | What it looks for | Flags | In law texts | Reviewed | Survived review |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Lapsed time limits | Text still applying a rule "until" a date that has passed | 4 | 4 | 4 | 0 |
+
+"In law texts" counts all the law this repository holds: the Basic Law (`basic-law/`) and its Annexes (`annexes/`), the four codes (`code/`), Law 7/2008 (`lei-relacoes-trabalho/`) and the Assembly's laws (`lei/`). The other files are the READMEs (among them the folders of the seven 2026 laws not yet in force, which hold only a README), the root files (the licence, `REPRODUCE.md`, `jurisdiction.json`), `data/` and `tools/`; none has a flag. The history has 64 versions, one per act, each credited to its publisher as the oldest version available (`Kind: publisher`: the Legislative Assembly for the Basic Law, the Annexes and the laws; the Imprensa Oficial for the codes and Law 7/2008); the two commits that moved the act folders and read them in a new layout (`Kind: documentation`) are left out. The amounts are in patacas, the currency in use, and no text mentions escudos, so there are no dead currencies. The time-limit search reads Portuguese only; the dates in the Basic Law and the Annexes, in Chinese, were read by hand, and none ends a rule (Articles 120 and 145 of the Basic Law recognise land leases and contracts whose terms run beyond 19 December 1999). The time-limit search now reads "até ao dia 30 de Junho de 2027" (until the day ...), and no longer reads the Portuguese "do" (of the) as the Slavic "do" (until): "produz efeitos a partir do dia 1 de Janeiro de 2021" (takes effect from 1 January 2021) and "Do dia 1 de Julho de 2026 até ..." had been read as rules ending on that day. Lapsed time limits went from 7 to 4. The search for duplicate numbering no longer takes a line that begins with a reference, where the text wraps ("artigo 71.º da Lei Básica ..."), for an article heading: 8 flags became 0. It reads only labels followed by text on the same line, and the headings here stand alone on their line, so it could not have seen a real duplicate heading. The reference search now reads "artigo 5.º" (the ordinal sign after a full stop) as other Portuguese texts write "art. 5º", which changes no number here: no article has ever been removed, and none is held as a "(Revogado)" placeholder.
+
+*Edge cases: the 4 flags, checked by hand, and what the 12 flags the fixes removed were, in [EDGE-CASES.en.md](EDGE-CASES.en.md).*
+
+## Problems found in this repository
+
+- **Three laws that run on into the next law:** where the Boletim Oficial prints the next law straight after a law, the start of the next law stayed in the file. [`lei/2018/10/texto.md`](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2018/10/texto.md#L248-L270) (Law 10/2018) ends, after its annex, with the heading, title and Article 1 of Law 11/2018 (amending Law 2/93/M on the right of assembly and demonstration) and the beginning of the new wording of its Article 5; [`lei/2022/9/texto.md`](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2022/9/texto.md#L107-L116) (Law 9/2022) ends with the title and enacting formula of Law 10/2022 (legal regime for the interception and protection of communications), which this repository does not hold; and [`lei/2024/9/texto.md`](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/lei/2024/9/texto.md#L431-L446) (Law 9/2024) ends, after the republished Law 4/1999, with the title and enacting formula of Law 10/2024. Laws 11/2018 and 10/2024 also have folders of their own. A reader of these three files, and a search of them, sees text that is not the law's.
+- **Two repealed articles of the Commercial Code held with their full text:** the Boletim Oficial's page of the Commercial Code (read in an Internet Archive copy of 13 September 2025) marks Articles 67 and 68 (registration of the appointment of a manager, and of its change or revocation) with an asterisk and the note "*Revogado: Lei n.º 6/2000" (repealed by Law 6/2000), while still printing their text. [`art-067.md`](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/code/codigo-comercial/art-067.md) and [`art-068.md`](https://github.com/lexifina/macau-law/blob/92c2f4c3ee8fb6bd124b1c7f723069cbe5e9cf1d/code/codigo-comercial/art-068.md) keep both paragraphs, with the note as their last line. `REPRODUCE.md` says that the site's footnote lines are left out and that a number the site marks as revoked keeps only its number; on that page these are the only two notes written "*Revogado:" rather than "* Revogado - Consulte também:", and they are the only notes left in the codes' text.
+
+## Files
+
+| File | What it holds |
+| --- | --- |
+| [data/flags.csv](data/flags.csv) | Every flag, one row per provision and issue |
+| [data/reviewed.csv](data/reviewed.csv) | The 4 flags the model reviewed, with its verdict and reason |
+| [data/by_category.csv](data/by_category.csv) | The counts in the table above |
+| [tools/](tools/) | The scripts that made this run |
+
+Columns: `category` and `category_pt` (the category in English and Portuguese), `detector`, `kind` (`law` or `other`), `path` (the file in this repository), `date` (the date the flag turns on), `reference` (the act or line involved; here the publisher the version is credited to), `summary`, `score` (the detector's ranking, 0 to 1), `review` (`artefact`, `lawful` or `candidate_defect`), `survives_rebuttal`, `review_note` (the model's reason, in English), `url` (the file at the commit that was read).
+
+## How it was made
+
+- **Detectors:** global-law's [vulnerabilities/scripts](https://github.com/lexifina/global-law/tree/main/vulnerabilities/scripts), with the fixes in [tools/](tools/README.md) (among them `patch_mo.py`, the fixes for Portuguese as written in Macau), run on this repository at commit `92c2f4c`. The history table the detectors read was built from this repository's own commits (the act or publisher each version is credited to, and the `In-force` and `Kind` trailers): the 64 versions credited to a publisher count as law. Paths from before the move of 10 November 2026 are mapped to each act's folder today through `data/paths.json`. The corpus language was set to Portuguese, the language of the codes and the laws.
+- **Model review:** gpt-5.4-mini, the 40 strongest flags per category, which here meant all 4; one pass says whether a flag is real, a second argues that it is not. There were no empty periods to review. The model does not review duplicate numbering, dead currencies or publisher notes.
+- **Hand check:** the 4 flags were read in the laws' text in this repository, as were the 12 flags the fixes removed and the laws they came from. The two Commercial Code articles were compared with the Boletim Oficial's page in the Internet Archive; the run-on laws were not compared with the Boletim Oficial.
+
+To report a correction, open an issue with the provision and an official source.
+
+## Licence
+
+The lists and notes are Lexifina's, under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), like this repository's arrangement, commit messages and tools. Quoted law text is the official text as published by the Imprensa Oficial in the Boletim Oficial of the Macao Special Administrative Region and by the Legislative Assembly on its website; neither states a licence, and the text is reproduced for reference with attribution to the publisher. See [LICENSE](../LICENSE).
